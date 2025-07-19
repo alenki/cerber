@@ -18,3 +18,9 @@ window.addEventListener('scroll', () => {
 
     lastScroll = scrollPosition();
 })
+
+
+// scroll to collection 
+document.querySelector(".hero_button").onclick = function() {
+    document.getElementById("collection").scrollIntoView({ behavior: "smooth" });
+}
