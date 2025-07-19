@@ -14,10 +14,11 @@ const galleryDOM = document.getElementById('gallery_column');
                 galleryDOM.innerHTML = `
                     <div class="image_wrapper">
                         <img src="${item.productImage}" alt="${item.productName}">
+                    </div>
+                    <div class="image_wrapper">
                         <img src="${item.productImage}" alt="${item.productName}">
-                        <img src="${item.productImage}" alt="${item.productName}">
-                        <img src="${item.productImage}" alt="${item.productName}">
-                        <img src="${item.productImage}" alt="${item.productName}">
+                    </div>
+                    <div class="image_wrapper">
                         <img src="${item.productImage}" alt="${item.productName}">
                     </div>
                 `
