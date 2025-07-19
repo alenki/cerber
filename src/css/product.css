@@ -1,0 +1,93 @@
+/* --------------- Fonts ---------------- */
+@font-face {
+    font-family: Pragmatica;
+    src: url(./fonts/Pragmatica.ttf);
+    font-weight: 100, 200, 300, 400, 500;
+    font-style: normal;
+    font-display: swap;
+    text-transform: uppercase;
+}
+/* --------------- End of Fonts ---------------- */
+
+/* --------------- Product ---------------- */
+.gallery_column {
+    width: 59%;
+}
+.image_wrapper{
+    height: 660px;
+    width: 100%;
+}
+.image_wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.product_info {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 200px;
+    z-index:100;
+}
+.product_title {
+    font-size: 22px;
+    line-height: 1.35;
+    font-weight: 500;
+    font-family: Pragmatic;
+}
+.size_box{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all .3s;
+
+    font-size: 14px;
+    font-family: 'Pragmatica',Arial,sans-serif;
+    font-weight: 400;
+    color: #000000;
+}
+.size_box:hover{
+    border: 1px solid rgba(0, 0, 0, 1);
+}
+.size_box_active {
+    border: 1px solid rgba(0,0,0,.5) !important;
+    background-color: #000000 !important;
+    font-weight: 600 !important;
+    color: #ffffff;
+    pointer-events: none;
+}
+.buy_button {
+    color: rgb(255, 255, 255);
+    border: 0px solid rgb(185, 185, 185);
+    background-color: rgb(0, 0, 0);
+    border-radius: 0px;
+    font-family: Pragmatica;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-image: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    user-select: none;
+    box-sizing: border-box;
+
+    height: 45px;
+    font-size: 14px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    text-decoration: none;
+}
+.product_details {
+    font-size: 12px;
+    line-height: 1.55;
+    opacity: 0.7;
+}
+/* --------------- End of Product ---------------- */

@@ -42,7 +42,7 @@ async function Load() {
                 <div class="col-4 mb-5">
                     <div class="collection_element">
                         <div class="collection_image">
-                            <a href="#">
+                            <a href="../../product/?id=${item.productName}">
                                 <img src="${item.productImage}" alt="${item.productName}">
                             </a>  
                         </div>
