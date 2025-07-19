@@ -1,3 +1,6 @@
+// Imports
+import { collection } from "/src/js/contentful.js"
+
 // Navbar animation
 let lastScroll = 0;
 const defaultOffset = 100;
@@ -23,4 +26,30 @@ window.addEventListener('scroll', () => {
 // scroll to collection 
 document.querySelector(".hero_button").onclick = function() {
     document.getElementById("collection").scrollIntoView({ behavior: "smooth" });
+}
+
+// Onload
+window.onload = function() {
+    Load();
+};
+const collectionDOM = document.getElementById('collection_items');
+async function Load() {   
+    // get collection
+    await collection.getCollection().then(collection => {
+        let result = '';
+        collection.forEach(item => {
+            result += `
+                <div class="col-4 mb-5">
+                    <div class="collection_element">
+                        <div class="collection_image">
+                            <a href="#">
+                                <img src="${item.productImage}" alt="${item.productName}">
+                            </a>  
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        collectionDOM.innerHTML = result;
+    })
 }

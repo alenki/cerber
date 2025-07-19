@@ -68,7 +68,7 @@
   left: 3%;
   width: 95%;
   height: 40%;
-  background-color: #212121;
+  background-color: #000;
   transition: 0.5s;
   transform-origin: center;
 }
@@ -80,7 +80,7 @@
   left: 3%;
   width: 95%;
   height: 40%;
-  background-color: #212121;
+  background-color: #000;
   transition: 0.5s;
 }
 .hero_button:hover::before, .hero_button:hover::after {
@@ -91,3 +91,39 @@
 }
 /* End of Hero button animation */
 /* --------------- End of Hero ---------------- */
+
+/* --------------- Collection ---------------- */
+.collection {
+  height: 100vh;
+  display: flex;
+
+  text-align: center;
+}
+.collection_element{
+  height: 31rem;
+  width: 100%;
+  /* background-color: black; */
+  border-radius: 15px;
+  border: 1.5px solid gray;
+}
+.collection_image {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.collection_image a {
+  height: 100%;
+  width: 100%;
+}
+.collection_image img {
+  object-fit: cover;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+}
+.collection_image img:hover {
+  opacity: 0.7;
+}
+/* --------------- End of Collection ---------------- */
