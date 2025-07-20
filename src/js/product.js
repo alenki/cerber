@@ -6,11 +6,19 @@ const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
 
 const galleryDOM = document.getElementById('gallery_column');
+const product_title = document.querySelector('.product_title');
+const product_details = document.querySelector('.product_details');
+const product_price = document.querySelector('.product_price');
 
 // get collection
     await collection.getCollection().then(collection => {
         collection.forEach(item => {
             if(item.productName==productId){
+                // Info
+                product_title.innerHTML = item.productName;
+                product_details.innerHTML = item.productDetails;
+                product_price.innerHTML = item.productPrice + "р";
+                // Images
                 let img_result = '';
                 item.productPhotos.forEach(item_img => {
                     img_result += `

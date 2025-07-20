@@ -15,14 +15,14 @@ class Collection{
             });
             let collection = collection_data.items;
             collection = collection.map(item =>{
-                const {productName} = item.fields;
+                const {productName, productDetails, productPrice} = item.fields;
                 var productImage;
                 try{productImage = item.fields.productImage.fields.file.url;}
                 catch(e){console.log("У", productName, "нет основной фотки")}
                 var productPhotos;
                 try{productPhotos = item.fields.productPhotos;}
                 catch(e){console.log("У", productName, "нет фоток")}
-                return {productName, productImage, productPhotos}
+                return {productName, productImage, productPhotos, productDetails, productPrice}
             })
             return collection
         } catch(error) {
