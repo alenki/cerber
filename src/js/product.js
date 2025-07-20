@@ -11,17 +11,15 @@ const galleryDOM = document.getElementById('gallery_column');
     await collection.getCollection().then(collection => {
         collection.forEach(item => {
             if(item.productName==productId){
-                galleryDOM.innerHTML = `
+                let img_result = '';
+                item.productPhotos.forEach(item_img => {
+                    img_result += `
                     <div class="image_wrapper">
-                        <img src="${item.productImage}" alt="${item.productName}">
+                        <img src="${item_img.fields.file.url}" alt="${item.productName}">
                     </div>
-                    <div class="image_wrapper">
-                        <img src="${item.productImage}" alt="${item.productName}">
-                    </div>
-                    <div class="image_wrapper">
-                        <img src="${item.productImage}" alt="${item.productName}">
-                    </div>
-                `
+                    `
+                })
+                galleryDOM.innerHTML = img_result;
             }
         })
     });

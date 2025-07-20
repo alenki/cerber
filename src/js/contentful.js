@@ -18,8 +18,11 @@ class Collection{
                 const {productName} = item.fields;
                 var productImage;
                 try{productImage = item.fields.productImage.fields.file.url;}
-                catch(e){console.log("У", productName, "нет фотки")}
-                return {productName, productImage}
+                catch(e){console.log("У", productName, "нет основной фотки")}
+                var productPhotos;
+                try{productPhotos = item.fields.productPhotos;}
+                catch(e){console.log("У", productName, "нет фоток")}
+                return {productName, productImage, productPhotos}
             })
             return collection
         } catch(error) {
