@@ -1,14 +1,13 @@
-
-
-
 /* --------------- Hero ---------------- */
 .background{
   width: 100%;
-  height: 100%;
-  position: relative;
+  height: 100vh;
+  top: 0px;
+  position: sticky;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 .background img{
   width: 100%;
@@ -17,63 +16,77 @@
 }
 .hero{
     height: 100vh;
+    width: 100vw;
     display: flex;
+    position: absolute;
+    top: 0px;
 
     text-align: center;
     align-items: center;
+    z-index: 200;
 }
 .hero_main {
     position: absolute; 
     width: 100%;
-    z-index: 100;
-
     color: rgba(255, 255, 255, 0.87);
+}
+.hero_text {
+  font-size: 4.5rem;
 }
 .hero_button span {
   font-size: 1.3rem;
 }
 /* Hero button animation */
 .hero_button {
-  width: 25em;
-  position: relative;
-  height: 4.5em;
-  border: 3px ridge white;
-  outline: none;
-  background-color: transparent;
-  color: white;
-  transition: 1s;
-  border-radius: 0.3em;
-  font-size: 16px;
-  font-weight: bold;
+  background: var(--color-back);
+  border-radius: 5px;
+  box-shadow:
+    inset 0px -6px 18px -6px rgba(30, 30, 30, 0),
+    inset rgb(51, 51, 51) -1px -1px 6px 0px,
+    inset 12px 0px 12px -6px rgba(30, 30, 30, 0),
+    inset -12px 0px 12px -6px rgba(30, 30, 30, 0),
+    rgb(51, 51, 51) -1px -1px 6px 0px;
+  border: solid 2px #030f14;
   cursor: pointer;
+  font-size: 18px;
+  padding: 0.7em 1.7em;
+  outline: none;
+  transition: all 0.3s;
+  user-select: none;
 }
-.hero_button::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 3%;
-  width: 95%;
-  height: 40%;
-  background-color: #000;
-  transition: 0.5s;
-  transform-origin: center;
-}
-.hero_button::before {
-  content: "";
-  transform-origin: center;
-  position: absolute;
-  top: 80%;
-  left: 3%;
-  width: 95%;
-  height: 40%;
-  background-color: #000;
-  transition: 0.5s;
-}
-.hero_button:hover::before, .hero_button:hover::after {
-  transform: scale(0)
-}
+
 .hero_button:hover {
-  box-shadow: inset 0px 0px 25px white;
+  box-shadow:
+    inset 0px -6px 18px -6px rgb(23, 23, 23),
+    inset 0px 6px 18px -6px rgba(23, 23, 23),
+    inset 12px 0px 12px -6px rgba(23, 23, 23, 0),
+    inset -12px 0px 12px -6px rgba(23, 23, 23, 0),
+    -1px -1px 6px 0px rgb(71, 71, 71);
+}
+
+.hero_button:active {
+  box-shadow:
+    inset 0px -12px 12px -6px rgba(23, 23, 23),
+    inset 0px 12px 12px -6px rgba(23, 23, 23),
+    inset 12px 0px 12px -6px rgba(23, 23, 23),
+    inset -12px 0px 12px -6px rgba(23, 23, 23),
+    -1px -1px 6px 0px rgba(71, 71, 71);
+}
+
+.hero_button_text {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 700;
+  margin: auto;
+  transition: all 0.3s;
+  width: fit-content;
+}
+
+.hero_button:hover .text {
+  transform: scale(0.9);
+}
+
+.hero_button:active .text {
+  transform: scale(0.8);
 }
 /* End of Hero button animation */
 /* --------------- End of Hero ---------------- */
@@ -81,15 +94,18 @@
 /* --------------- Collection ---------------- */
 .collection {
   display: flex;
-
+  position: relative;
   text-align: center;
+  z-index: 200;
+  padding-bottom: 5rem;
 }
 .collection_element{
   height: 31rem;
   width: 100%;
   /* background-color: black; */
   border-radius: 15px;
-  border: 1.5px solid gray;
+  /* border: 1.5px solid gray; */
+  /* background-color: #000; */
 }
 .collection_image {
   height: 100%;
@@ -107,8 +123,38 @@
   border-radius: 0.5rem;
   height: 100%;
   width: 100%;
+  transition: all .7s;
 }
 .collection_image img:hover {
-  opacity: 0.7;
+  transform: scale(1.07);
 }
 /* --------------- End of Collection ---------------- */
+
+/* --------------- nigga's section ---------------- */
+.main_nigga {
+  height: 650px;
+  width: 100vw;
+
+  position: relative;
+  text-align: center;
+  z-index: 200;
+}
+.first_nigga{
+  height: 100%;
+  width: 50%;
+}
+.first_nigga img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.second_nigga{
+  height: 100%;
+  width: 50%;
+}
+.second_nigga img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* --------------- End of nigga's section ---------------- */

@@ -1,3 +1,48 @@
+
+/* --------------- Fonts ---------------- */
+@font-face {
+    font-family: Pragmatica;
+    src: url(./fonts/Pragmatica.woff2);
+    font-weight: 100, 200, 300, 400, 500;
+    font-style: normal;
+    font-display: swap;
+    text-transform: uppercase;
+}
+@font-face {
+    font-family: Fenice;
+    src: url(./fonts/Fenice.ttf);
+    font-weight: 100, 200, 300, 400, 500;
+    font-style: normal;
+    font-display: swap;
+    text-transform: uppercase;
+}
+.fenice {
+  font-family: Fenice;
+}
+/* --------------- End of Fonts ---------------- */
+
+/* --------------- Body ---------------- */
+body{
+  font-family: Pragmatica;
+}
+/* --------------- End of Body ---------------- */
+
+/* --------------- Music button ---------------- */
+.music_off {
+    display: none;
+}
+.music_icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    opacity: 0.9;
+    transition: transform .3s;
+}
+.music_icon:hover {
+    transform: scale(1.05);
+    transition: transform .3s;
+}
+/* --------------- End of Music button ---------------- */
+
 /* --------------- Nav ---------------- */
 .navbar {
     position: fixed;
@@ -8,8 +53,9 @@
     width: 100vw;
     height: 3.3rem;
     
-    background: rgba(93, 93, 93, 0.47);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(19,19,19,255);
+    opacity: 0.7;
+    box-shadow: 0 4px 30px rgb(48,44,44, 0.1);
     backdrop-filter: blur(6.8px);
     -webkit-backdrop-filter: blur(6.8px);
     border: 1px solid rgba(93, 93, 93, 0.3);
@@ -18,15 +64,19 @@
     transform: translateY(-130%);
 }
 .nav_link{
-  color: white;
-  text-decoration: none;
-
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
 }
 /* --------------- End of Nav ---------------- */
 
 /* --------------- Footer ---------------- */
 footer {
-    height: 15rem;
+    height: 16.5rem;
+    background-color: rgba(19,19,19,255);
+    position: relative;
+    z-index: 200;
 }
 .footer_subheading {
     font-size: 1.1rem;
@@ -35,8 +85,23 @@ footer {
     color: white;
     text-decoration: none;
     border-bottom: 1.5px solid white;
+    cursor: pointer;
 }
 .footer-link:hover {
     opacity: 0.9;
 }
 /* --------------- End of Footer ---------------- */
+
+/* --------------- Modal ---------------- */
+.custom-modal-content {
+    background: rgb(15, 15, 15) !important;
+    opacity: 0.9 !important;
+    box-shadow: 0 4px 30px rgb(48,44,44, 0.1) !important;
+    backdrop-filter: blur(6.8px) !important;
+    -webkit-backdrop-filter: blur(6.8px) !important;
+    border: 1px solid rgba(93, 93, 93, 0.3) !important;
+}
+.custom-modal-header {
+  border-bottom: none !important;
+}
+/* --------------- End of Modal ---------------- */

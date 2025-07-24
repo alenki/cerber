@@ -106,7 +106,7 @@ submitButton.onclick = function(e) {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors'})
         .then(response => {
-            form.innerHTML = "<span style=\"font-size: 1.5rem;\" class=\"col-form-label Russian\">Успешно!</span>";
+            form.innerHTML = "<span style=\"font-size: 1.5rem;\" class=\"col-form-label\">Заявка успешно отправлена, с вами скоро свяжутся!</span>";
             form.classList.add("successfull_form");
             submitButton.classList.add("d-none");
         })
