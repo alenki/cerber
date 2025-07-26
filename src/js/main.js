@@ -1,33 +1,27 @@
 // Imports
 import { collection } from "/src/js/contentful.js"
 
-// music
-const music_button = document.querySelector('.music_icon');
-const music_on = document.querySelector('.music_on');
-const music_off = document.querySelector('.music_off');
-const music = document.getElementById("music")
-
-// Music volume
-music.volume = 0.1; 
-
-// Music button
-music_button.onclick = function() {
-    if(music.muted==true) {
-        music_on.style.display = "block";
-        music_off.style.display = "none";
-        music.muted = false;
+// Logo to nav
+const nav_logo = document.querySelector(".nav_logo");
+const navbar = document.querySelector(".navbar");
+const arrow_up = document.querySelector(".arrow_up");
+window.addEventListener('scroll', () => {
+    if(window.scrollY >= window.innerHeight/2) {
+        nav_logo.style.display = "flex";
+        arrow_up.style.display = "block"
+        navbar.style.backgroundColor = "rgba(235,252,255,0.85)";
+    } else {
+        nav_logo.style.display = "none";
+        arrow_up.style.display = "none"
+        navbar.style.backgroundColor = "rgba(217, 217, 217, 0)";
     }
-    else {
-        music_on.style.display = "none";
-        music_off.style.display = "block";
-        music.muted = true;
-    }
-}
+    
+});
 
 // scroll to collection 
-document.querySelector(".hero_button").onclick = function() {
-    document.getElementById("collection").scrollIntoView({ behavior: "smooth" });
-}
+// document.querySelector(".hero_button").onclick = function() {
+//     document.getElementById("collection").scrollIntoView({ behavior: "smooth" });
+// }
 
 // Onload
 window.onload = function() {

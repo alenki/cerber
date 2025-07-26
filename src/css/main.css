@@ -1,3 +1,14 @@
+/* --------------- Fonts ---------------- */
+@font-face {
+    font-family: Intro;
+    src: url(./fonts/IntroFriday.ttf);
+    font-weight: 100, 200, 300, 400, 500;
+    font-style: normal;
+    font-display: swap;
+    text-transform: uppercase;
+}
+/* --------------- End of Fonts ---------------- */
+
 /* --------------- Hero ---------------- */
 .background{
   width: 100%;
@@ -30,9 +41,24 @@
     width: 100%;
     color: rgba(255, 255, 255, 0.87);
 }
+.logo {
+  opacity: 0.8;
+}
 .hero_text {
   font-size: 4.5rem;
+  line-height: 4.7rem;
+  font-family: Intro;
+  display: block;
+
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.8) 61%, rgba(216, 216, 216, 0.8) 121%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
+
+
 .hero_button span {
   font-size: 1.3rem;
 }
