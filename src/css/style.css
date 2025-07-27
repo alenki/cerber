@@ -1,8 +1,24 @@
 
 /* --------------- Fonts ---------------- */
 @font-face {
+    font-family: Intro;
+    src: url(./fonts/IntroFriday.ttf);
+    font-weight: 100, 200, 300, 400, 500;
+    font-style: normal;
+    font-display: swap;
+    text-transform: uppercase;
+}
+@font-face {
     font-family: Pragmatica;
     src: url(./fonts/Pragmatica.woff2);
+    font-weight: 100, 200, 300, 400, 500;
+    font-style: normal;
+    font-display: swap;
+    text-transform: uppercase;
+}
+@font-face {
+    font-family: Darumadrop;
+    src: url(./fonts/DarumadropOne-Regular.ttf);
     font-weight: 100, 200, 300, 400, 500;
     font-style: normal;
     font-display: swap;
@@ -50,6 +66,7 @@ body{
     margin-left: 3rem;
     margin-right: 3rem;
     padding-bottom: 7px;
+    cursor: pointer;
 }
 .nav_logo img{
     width: 100%;
@@ -70,22 +87,50 @@ body{
 
 /* --------------- Footer ---------------- */
 footer {
-    height: 16.5rem;
-    background-color: rgba(19,19,19,255);
+    height: 15rem;
+    background-color: #343434;
     position: relative;
     z-index: 200;
 }
 .footer_subheading {
     font-size: 1.1rem;
 }
-.footer-link {
+.footer_link {
     color: white;
     text-decoration: none;
-    border-bottom: 1.5px solid white;
     cursor: pointer;
+    font-size: 1.3rem;
+    /* font-family: Inter; */
 }
-.footer-link:hover {
-    opacity: 0.9;
+.footer_icon {
+    background-color: #C9FAFF;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 37px;
+}
+.footer_main_text {
+    font-family: Darumadrop;
+    font-size: 1.7rem;
+}
+.footer_logo {
+    width: 100%;
+    height: 5rem;
+}
+.footer_logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.karaf_tag {
+    font-family: Darumadrop;
+    font-size: 1.7rem;
+    line-height: 15px;
+    text-decoration: none;
+    color: white;
 }
 /* --------------- End of Footer ---------------- */
 

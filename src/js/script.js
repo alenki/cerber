@@ -28,9 +28,3 @@ document.querySelector(".about_button").addEventListener('click', () => {
     })
     modal.toggle()
 })
-document.querySelector(".footer_about").addEventListener('click', () => {
-    var modal = new bootstrap.Modal(document.getElementById('aboutModal'), {
-        keyboard: false
-    })
-    modal.toggle()
-})

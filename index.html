@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS -->
     <link rel="stylesheet" href="/src/css/BootstrapSASS.css">
@@ -14,32 +14,26 @@
     <!-- Header -->
     <header class="d-flex justify-content-center">
       <nav class="navbar row d-flex align-content-center">
-        <div class="col-1 d-flex justify-content-end">
+        <a href="#" class="col-1 d-flex justify-content-end" style="text-decoration: none; color: black;">
           <i load-hicon="arrow-up-circle" class="arrow_up" style="width: 41px; height: 41px; display: none;"></i>
-        </div>
+        </a>
           <div class="col-10 d-flex justify-content-center align-items-center">
-            <!-- <a href="#" class="nav_link px-4">ГЛАВНАЯ</a> -->
-             
             <a href="#contacts" class="nav_link px-4">КОНТАКТЫ</a>
-            <div class="nav_logo">
+            <a href="#" class="nav_logo">
               <img src="/cerber.png" alt="cerber">
-            </div>
+            </a>
             <div class="nav_link about_button px-4">О БРЕНДЕ</div>
-            
           </div>
-        <div class="col-1">
-          
-        </div>
+        <div class="col-1"></div>
       </nav>
     </header>
 
     <!-- Hero -->
-    <div class="background">
-      <img src="/background.png" alt="cerber">
-    </div>
     <section class="hero">
+      <div class="background">
+        <img src="/background.png" alt="cerber">
+      </div>
       <div class="hero_main pb-5 mb-5">
-        <!-- <h1 class="hero_text pb-3">This is Cerber.</h1> -->
         <!-- Logo -->
         <div class="logo pb-5">
           <img src="/cerber.png" alt="cerber">
@@ -47,56 +41,57 @@
         <span class="hero_text">
           ГОРЫ. УЛИЦЫ. <br> ТВОЯ ИДЕНТИЧНОСТЬ
         </span>
-        <!-- <button class="hero_button">
-          <div class="hero_button_text">ПОСМОТРЕТЬ КОЛЛЕКЦИЮ</div>
-        </button> -->
-        <!-- <button class="hero_button"><span>СМОТРЕТЬ КОЛЛЕКЦИЮ</span></button> -->
       </div>
     </section>
-
-    
     
 
     <!-- Collection -->
     <section class="bg-white collection" id="collection">
       <div class="container">
-        <h2 class="text-dark pt-5 mt-3">НОВАЯ КОЛЛЕКЦИЯ</h2>
+        <h2 class="collection_heading text-dark pt-5 mt-3">НОВАЯ КОЛЛЕКЦИЯ</h2>
         <div class="row" id="collection_items"></div>
       </div>
     </section>
 
-    <!-- nigga's section -->
-    <section class="main_nigga d-flex">
-      <div class="first_nigga">
-        <img src="/niggas.jpg" alt="cerber">
-      </div>
-      <div class="second_nigga">
-        <img src="/nwa.jpg" alt="cerber">
-      </div>
-    </section>
-
-    
-
     <!-- Footer -->
     <footer class="" id="contacts">
-      <div class="footer-container container pt-5 d-flex text-light" style="height: 100%;">
-        <!-- Left part -->
-        <div class="footer_l_part d-flex flex-column ps-3" style="height: 65%;">
-          <h3 class=" pb-3"><b>gotta have it</b></h3>
-          <!-- <p class="" style="white-space:pre-wrap;">cerber. © 2025</p> -->
-           <p class="" style="white-space:pre-wrap;">made by karaf</p>
-        </div>
-        <!-- Contacts -->
-        <div class="footer_m_part d-flex flex-column ms-auto">
-          <b class="footer_subheading ">contacts</b>
-          <div class="mt-4"><a href="https://www.instagram.com/cerber.nlc/" class="footer-link" target="_blank">Instagram</a></div>
-          <div class="mt-3"><a href="https://t.me/xAlenki" class="footer-link" target="_blank">Telegram</a></div>
-        </div>
-        <!-- Info -->
-        <div class="footer_r_part d-flex flex-column ms-5 me-sm-5 me-3">
-          <b class="footer_subheading ">info</b>
-          <div class="mt-4"><span class="footer-link footer_about">О бренде</span></div>
-          <div class="mt-3"><a href="" class="footer-link" target="_blank">Производитель</a></div>
+      <div class="footer-container container pt-4 d-flex text-light" style="height: 100%;">
+        <div class="row" style="width: 100%;">
+          <div class="col-4 pt-4">
+            <a href="https://okaraf.ru" class="karaf_tag" target="_blank">MADE BY
+              <br>
+              <span style="font-size: 2.1rem;">KARAF</span></a>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <div class="">
+              <span class="footer_main_text">enjoy yourself with</span>
+              <div class="footer_logo mt-2">
+                <img src="/cerber_light.png" alt="cerber">
+              </div>
+            </div>
+          </div>
+          <div class="col-4 d-flex justify-content-end">
+            <div class="pt-2">
+              <a href="mailto::contact@cerber.com" class="footer_link d-flex align-items-center">
+                <div class="footer_icon me-2">
+                  <i load-hicon="email" style="width: 24px; height: 24px; color: black;"></i>
+                </div>
+                contact@cerber.com
+              </a> <br>
+              <a href="https://t.me/cerber_nlc" class="footer_link d-flex align-items-center" target="_blank">
+                <div class="footer_icon me-2">
+                  <i load-hicon="send" style="width: 24px; height: 24px; color: black;"></i>
+                </div>
+                @cerber_nlc
+              </a> <br>
+              <a href="https://www.instagram.com/cerber.nlc/" class="footer_link d-flex align-items-center" target="_blank">
+                <div class="footer_icon me-2">
+                  <i load-hicon="instagram" style="width: 24px; height: 24px; color: black;"></i>
+                </div>
+                @cerber.nlc
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

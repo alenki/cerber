@@ -1,20 +1,7 @@
-/* --------------- Fonts ---------------- */
-@font-face {
-    font-family: Intro;
-    src: url(./fonts/IntroFriday.ttf);
-    font-weight: 100, 200, 300, 400, 500;
-    font-style: normal;
-    font-display: swap;
-    text-transform: uppercase;
-}
-/* --------------- End of Fonts ---------------- */
-
 /* --------------- Hero ---------------- */
 .background{
   width: 100%;
   height: 100vh;
-  top: 0px;
-  position: sticky;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,17 +16,18 @@
     height: 100vh;
     width: 100vw;
     display: flex;
-    position: absolute;
+    position: sticky;
     top: 0px;
 
     text-align: center;
     align-items: center;
-    z-index: 200;
+    
 }
 .hero_main {
     position: absolute; 
     width: 100%;
     color: rgba(255, 255, 255, 0.87);
+    z-index: 200;
 }
 .logo {
   opacity: 0.8;
@@ -133,6 +121,10 @@
   /* border: 1.5px solid gray; */
   /* background-color: #000; */
 }
+.collection_heading {
+  font-family: Intro;
+  font-size: 3rem;
+}
 .collection_image {
   height: 100%;
   width: 100%;
@@ -155,32 +147,3 @@
   transform: scale(1.07);
 }
 /* --------------- End of Collection ---------------- */
-
-/* --------------- nigga's section ---------------- */
-.main_nigga {
-  height: 650px;
-  width: 100vw;
-
-  position: relative;
-  text-align: center;
-  z-index: 200;
-}
-.first_nigga{
-  height: 100%;
-  width: 50%;
-}
-.first_nigga img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.second_nigga{
-  height: 100%;
-  width: 50%;
-}
-.second_nigga img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-/* --------------- End of nigga's section ---------------- */
