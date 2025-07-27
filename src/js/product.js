@@ -20,6 +20,9 @@ const product_price = document.querySelector('.product_price');
     await collection.getCollection().then(collection => {
         collection.forEach(item => {
             if(item.productName==productId){
+                // Initially set clothing in the form
+                document.getElementById("clothing").value = item.productName;
+                document.getElementById("price").value = item.productPrice;
                 // Info
                 product_title.innerHTML = item.productName;
                 product_details.innerHTML = item.productDetails;

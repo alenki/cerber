@@ -124,6 +124,7 @@
 .collection_heading {
   font-family: Intro;
   font-size: 3rem;
+  letter-spacing: 3px;
 }
 .collection_image {
   height: 100%;
