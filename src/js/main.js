@@ -5,15 +5,21 @@ import { collection } from "/src/js/contentful.js"
 const nav_logo = document.querySelector(".nav_logo");
 const navbar = document.querySelector(".navbar");
 const arrow_up = document.querySelector(".arrow_up");
+const hero_nav_contacts_button = document.querySelector('.hero_nav_contacts_button');
+const hero_nav_about_button = document.querySelector('.hero_nav_about_button');
 window.addEventListener('scroll', () => {
     if(window.scrollY >= window.innerHeight/2) {
         nav_logo.style.display = "flex";
         arrow_up.style.display = "block"
         navbar.style.backgroundColor = "rgba(235,252,255,0.85)";
+        hero_nav_contacts_button.classList.remove('px-5');
+        hero_nav_about_button.classList.remove('px-5');
     } else {
         nav_logo.style.display = "none";
         arrow_up.style.display = "none"
         navbar.style.backgroundColor = "rgba(217, 217, 217, 0)";
+        hero_nav_contacts_button.classList.add('px-5');
+        hero_nav_about_button.classList.add('px-5');
     }
     
 });
