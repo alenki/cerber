@@ -42,12 +42,12 @@
     position: absolute; 
     width: 100%;
     color: rgba(255, 255, 255, 0.87);
-    height: 70vh;
+    height: 75vh;
 }
 .logo {
   opacity: 0.8;
-  margin-bottom: 145px;
-  width: 73rem;
+  margin-bottom: 100px;
+  width: 67rem;
   position: relative;
   z-index: 200;
 }
@@ -58,7 +58,7 @@
   object-fit: cover;
 }
 .hero_text {
-  font-size: 5.7rem;
+  font-size: 5.1rem;
   line-height: 4.7rem;
   font-family: Intro;
   display: block;
@@ -74,14 +74,14 @@
 }
 @media only screen and (max-width: 1715px) {
     .hero_main{
-        height: 59vh;
+        height: 63vh;
     }
     .logo {
-      margin-bottom: 115px;
-      width: 63rem;
+      margin-bottom: 45px;
+      width: 61rem;
     }
     .hero_text {
-      font-size: 5.3rem;
+      font-size: 4.7rem;
     }
 }
 /* --------------- End of Hero ---------------- */
