@@ -12,6 +12,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
 
 const galleryDOM = document.getElementById('gallery_column');
+const mobile_galleryDOM = document.getElementById('mobile_gallery_column');
 const product_title = document.querySelector('.product_title');
 const product_details = document.querySelector('.product_details');
 const product_price = document.querySelector('.product_price');
@@ -37,6 +38,7 @@ const product_price = document.querySelector('.product_price');
                     `
                 })
                 galleryDOM.innerHTML = img_result;
+                mobile_galleryDOM.innerHTML = img_result;
             }
         })
     });

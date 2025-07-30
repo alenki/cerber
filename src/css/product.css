@@ -25,6 +25,22 @@
     width: 100%;
     object-fit: contain;
 }
+.mobile_gallery{
+    width: 36rem;
+    height: 36rem;
+
+    display: grid;
+    grid-auto-flow: column;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.mobile_gallery_wrapper{
+    width: 100%;
+    position: relative;
+    scroll-snap-type: x mandatory;
+}
 .product_info {
     height: 590px;
     position: -webkit-sticky;
@@ -38,7 +54,7 @@
     font-size: 22px;
     line-height: 1.35;
     font-weight: 500;
-    font-family: Pragmatic;
+    font-family: Pragmatica;
 }
 .size_box{
     width: 40px;
@@ -51,7 +67,7 @@
     transition: all .3s;
 
     font-size: 14px;
-    font-family: 'Pragmatica',Arial,sans-serif;
+    font-family: Pragmatica,'Arial','sans-serif';
     font-weight: 400;
     color: #000000;
 }
@@ -95,6 +111,77 @@
     font-size: 12px;
     line-height: 1.55;
     opacity: 0.7;
+}
+@media only screen and (max-width: 750px) {
+    .main_container{
+        display: none !important;
+    }
+    .mobile_container{
+        display: flex !important;
+    }
+    .image_wrapper{
+        height: 36rem;
+        width: 36rem;
+    }
+    .product_info{
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+}
+@media only screen and (max-width: 596px) {
+    .image_wrapper{
+        height: 25rem;
+        width: 25rem;
+    }
+    .mobile_gallery{
+        width: 25rem;
+        height: 25rem;
+    }
+}
+@media only screen and (max-width: 427px) {
+    .product_title {
+        font-size: 17px;
+    }
+    .product_info {
+        line-height: 13px;
+    }
+    .product_details{
+        font-size: 10px;
+    }
+    .product_price{
+        line-height: 50px;
+    }
+    .product_size{
+        padding-top: 0 !important;
+    }
+    .image_wrapper{
+        height: 20rem;
+        width: 20rem;
+    }
+    .mobile_gallery{
+        width: 20rem;
+        height: 20rem;
+    }
+}
+@media only screen and (max-width: 335px) {
+    .image_wrapper{
+        height: 15rem;
+        width: 15rem;
+    }
+    .mobile_gallery{
+        width: 15rem;
+        height: 15rem;
+    }
+}
+@media only screen and (max-width: 265px) {
+    .image_wrapper{
+        height: 11rem;
+        width: 11rem;
+    }
+    .mobile_gallery{
+        width: 11rem;
+        height: 11rem;
+    }
 }
 /* --------------- End of Product ---------------- */
 

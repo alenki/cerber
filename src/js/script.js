@@ -2,7 +2,7 @@
 
 // Navbar animation
 let lastScroll = 0;
-const defaultOffset = 100;
+const defaultOffset = 15;
 const header = document.querySelector('.navbar');
 
 const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
