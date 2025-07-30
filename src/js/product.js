@@ -24,6 +24,8 @@ const product_price = document.querySelector('.product_price');
                 // Initially set clothing in the form
                 document.getElementById("clothing").value = item.productName;
                 document.getElementById("price").value = item.productPrice;
+                document.getElementById("mobile_clothing").value = item.productName;
+                document.getElementById("mobile_price").value = item.productPrice;
                 // Info
                 product_title.innerHTML = item.productName;
                 product_details.innerHTML = item.productDetails;
@@ -77,40 +79,6 @@ size_box_xl.addEventListener("click", () => {
     localStorage.setItem("size", "XL");
 });
 
-// Mobile Size
-const mobile_size_box_s = document.getElementById('mobile_size_box_s');
-const mobile_size_box_m = document.getElementById('mobile_size_box_m');
-const mobile_size_box_l = document.getElementById('mobile_size_box_l');
-const mobile_size_box_xl = document.getElementById('mobile_size_box_xl');
-mobile_size_box_s.addEventListener("click", () => {
-    mobile_size_box_s.classList.add("mobile_size_box_active");
-    mobile_size_box_m.classList.remove("mobile_size_box_active");
-    mobile_size_box_l.classList.remove("mobile_size_box_active");
-    mobile_size_box_xl.classList.remove("mobile_size_box_active");
-    localStorage.setItem("size", "S");
-});
-mobile_size_box_m.addEventListener("click", () => {
-    mobile_size_box_s.classList.remove("mobile_size_box_active");
-    mobile_size_box_m.classList.add("mobile_size_box_active");
-    mobile_size_box_l.classList.remove("mobile_size_box_active");
-    mobile_size_box_xl.classList.remove("mobile_size_box_active");
-    localStorage.setItem("size", "M");
-});
-mobile_size_box_l.addEventListener("click", () => {
-    mobile_size_box_s.classList.remove("mobile_size_box_active");
-    mobile_size_box_m.classList.remove("mobile_size_box_active");
-    mobile_size_box_l.classList.add("mobile_size_box_active");
-    mobile_size_box_xl.classList.remove("mobile_size_box_active");
-    localStorage.setItem("size", "L");
-});
-mobile_size_box_xl.addEventListener("click", () => {
-    mobile_size_box_s.classList.remove("mobile_size_box_active");
-    mobile_size_box_m.classList.remove("mobile_size_box_active");
-    mobile_size_box_l.classList.remove("mobile_size_box_active");
-    mobile_size_box_xl.classList.add("mobile_size_box_active");
-    localStorage.setItem("size", "XL");
-});
-
 // Form
 const form = document.querySelector("#form")
 const submitButton = document.querySelector("#submit")
@@ -154,6 +122,91 @@ submitButton.onclick = function(e) {
             submitButton.classList.remove('disabled');
             submitButton.setAttribute("aria-disabled", "false");
             submitButton.setAttribute("tabindex", "0");
+        })
+    }
+}
+
+
+
+// --------------- MOBILE ----------------
+
+// Mobile Size
+const mobile_size_box_s = document.getElementById('mobile_size_box_s');
+const mobile_size_box_m = document.getElementById('mobile_size_box_m');
+const mobile_size_box_l = document.getElementById('mobile_size_box_l');
+const mobile_size_box_xl = document.getElementById('mobile_size_box_xl');
+mobile_size_box_s.addEventListener("click", () => {
+    mobile_size_box_s.classList.add("mobile_size_box_active");
+    mobile_size_box_m.classList.remove("mobile_size_box_active");
+    mobile_size_box_l.classList.remove("mobile_size_box_active");
+    mobile_size_box_xl.classList.remove("mobile_size_box_active");
+    localStorage.setItem("size", "S");
+});
+mobile_size_box_m.addEventListener("click", () => {
+    mobile_size_box_s.classList.remove("mobile_size_box_active");
+    mobile_size_box_m.classList.add("mobile_size_box_active");
+    mobile_size_box_l.classList.remove("mobile_size_box_active");
+    mobile_size_box_xl.classList.remove("mobile_size_box_active");
+    localStorage.setItem("size", "M");
+});
+mobile_size_box_l.addEventListener("click", () => {
+    mobile_size_box_s.classList.remove("mobile_size_box_active");
+    mobile_size_box_m.classList.remove("mobile_size_box_active");
+    mobile_size_box_l.classList.add("mobile_size_box_active");
+    mobile_size_box_xl.classList.remove("mobile_size_box_active");
+    localStorage.setItem("size", "L");
+});
+mobile_size_box_xl.addEventListener("click", () => {
+    mobile_size_box_s.classList.remove("mobile_size_box_active");
+    mobile_size_box_m.classList.remove("mobile_size_box_active");
+    mobile_size_box_l.classList.remove("mobile_size_box_active");
+    mobile_size_box_xl.classList.add("mobile_size_box_active");
+    localStorage.setItem("size", "XL");
+});
+
+// Form
+const mobile_form = document.querySelector("#mobile_form")
+const mobile_submitButton = document.querySelector("#mobile_submit")
+const mobile_requiredFields = document.querySelectorAll(".mobile_reqField")
+
+// Проверка при любом инпуте
+mobile_form.addEventListener('input', function() {
+    // Проверка заполнения полей
+    const mobile_allFilled = Array.from(mobile_requiredFields).every(field => field.value.trim() !== '');
+    if (mobile_allFilled) {
+        mobile_submitButton.classList.remove('disabled');
+        mobile_submitButton.setAttribute("aria-disabled", "false");
+        mobile_submitButton.setAttribute("tabindex", "0");
+    } else {
+        mobile_submitButton.classList.add('disabled');
+        mobile_submitButton.setAttribute("aria-disabled", "true");
+        mobile_submitButton.setAttribute("tabindex", "-1");
+    }
+});
+
+// Обработка подтверждения регистрации
+mobile_submitButton.onclick = function(e) {
+    document.getElementById("mobile_size").value = localStorage.getItem("size");
+    const mobile_formData = new FormData(mobile_form);
+    mobile_submitForm(mobile_formData);
+
+    // submit to google sheets
+    function mobile_submitForm(mobile_formData) {
+        mobile_submitButton.classList.add('disabled');
+        mobile_submitButton.setAttribute("aria-disabled", "true");
+        mobile_submitButton.setAttribute("tabindex", "-1");
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: mobile_formData, mode: 'no-cors'})
+        .then(response => {
+            mobile_form.innerHTML = "<span style=\"font-size: 1.5rem;\" class=\"col-form-label\">Заявка успешно отправлена, с вами скоро свяжутся!</span>";
+            mobile_form.classList.add("successfull_form");
+            mobile_submitButton.classList.add("d-none");
+        })
+        .catch(error => {
+            alert('Ошибка! Обратитесь к +7 (928) 691-26-02.', error.message)
+            mobile_submitButton.classList.remove('disabled');
+            mobile_submitButton.setAttribute("aria-disabled", "false");
+            mobile_submitButton.setAttribute("tabindex", "0");
         })
     }
 }
