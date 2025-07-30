@@ -197,4 +197,68 @@
 .collection_image img:hover {
   transform: scale(1.07);
 }
+@media only screen and (max-width: 1000px) {
+  .collection_element{
+    height: 25rem;
+  }
+}
+@media only screen and (max-width: 915px) {
+  .collection_element{
+    height: 20rem;
+  }
+  .collection_element_text{
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 665px) {
+  .collection_heading {
+    font-size: 2rem;
+  }
+  .collection_element_text{
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .collection_element_text_holder{
+    line-height: 15px;
+  }
+  .collection_element{
+    height: 15rem;
+  }
+  .collection_element_text{
+    font-size: 0.5rem;
+  }
+  .collection_heading {
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (max-width: 379px) {
+  .collection_element_text_holder{
+    line-height: 11px;
+  }
+  .collection_element{
+    height: 10rem;
+  }
+  .collection_element_text{
+    font-size: 0.4rem;
+  }
+  .collection_heading {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 295px) {
+  .collection_element{
+    height: 15rem;
+    width: 90%;
+  }
+  .custom-item-columns{
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    margin-top: 35px !important;
+    margin-bottom: 35px !important;
+  }
+  .collection_element_text{
+    font-size: 0.7rem;
+  }
+}
 /* --------------- End of Collection ---------------- */

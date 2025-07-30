@@ -40,14 +40,14 @@ async function Load() {
         let result = '';
         collection.forEach(item => {
             result += `
-                <div class="col-4 mb-5 mt-5">
+                <div class="col-md-4 col-6 custom-item-columns mb-5 mt-5 d-flex justify-content-center align-items-center">
                     <div class="collection_element">
                         <div class="collection_image pb-3">
                             <a href="../../product/?id=${item.productName}">
                                 <img src="${item.productImage}" alt="${item.productName}">
                             </a>  
                         </div>
-                        <div>
+                        <div class="collection_element_text_holder">
                             <span class="collection_element_text">${item.productName}</span><br>
                             <span class="collection_element_text">${item.productPrice}р</span>
                         </div>
