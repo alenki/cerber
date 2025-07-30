@@ -41,6 +41,7 @@
 body{
   font-family: Pragmatica;
   letter-spacing: 3px;
+  overflow-x: hidden;
 }
 /* --------------- End of Body ---------------- */
 
