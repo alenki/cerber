@@ -77,6 +77,40 @@ size_box_xl.addEventListener("click", () => {
     localStorage.setItem("size", "XL");
 });
 
+// Mobile Size
+const mobile_size_box_s = document.getElementById('mobile_size_box_s');
+const mobile_size_box_m = document.getElementById('mobile_size_box_m');
+const mobile_size_box_l = document.getElementById('mobile_size_box_l');
+const mobile_size_box_xl = document.getElementById('mobile_size_box_xl');
+mobile_size_box_s.addEventListener("click", () => {
+    mobile_size_box_s.classList.add("mobile_size_box_active");
+    mobile_size_box_m.classList.remove("mobile_size_box_active");
+    mobile_size_box_l.classList.remove("mobile_size_box_active");
+    mobile_size_box_xl.classList.remove("mobile_size_box_active");
+    localStorage.setItem("size", "S");
+});
+mobile_size_box_m.addEventListener("click", () => {
+    mobile_size_box_s.classList.remove("mobile_size_box_active");
+    mobile_size_box_m.classList.add("mobile_size_box_active");
+    mobile_size_box_l.classList.remove("mobile_size_box_active");
+    mobile_size_box_xl.classList.remove("mobile_size_box_active");
+    localStorage.setItem("size", "M");
+});
+mobile_size_box_l.addEventListener("click", () => {
+    mobile_size_box_s.classList.remove("mobile_size_box_active");
+    mobile_size_box_m.classList.remove("mobile_size_box_active");
+    mobile_size_box_l.classList.add("mobile_size_box_active");
+    mobile_size_box_xl.classList.remove("mobile_size_box_active");
+    localStorage.setItem("size", "L");
+});
+mobile_size_box_xl.addEventListener("click", () => {
+    mobile_size_box_s.classList.remove("mobile_size_box_active");
+    mobile_size_box_m.classList.remove("mobile_size_box_active");
+    mobile_size_box_l.classList.remove("mobile_size_box_active");
+    mobile_size_box_xl.classList.add("mobile_size_box_active");
+    localStorage.setItem("size", "XL");
+});
+
 // Form
 const form = document.querySelector("#form")
 const submitButton = document.querySelector("#submit")
